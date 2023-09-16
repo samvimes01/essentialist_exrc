@@ -1,0 +1,28 @@
+GET http://localhost:6000
+###
+
+POST http://localhost:6000/users/new
+content-type: application/json
+
+{
+    "email": "test1@test.com",
+    "password": "test",
+    "username": "test1",
+    "firstName": "New",
+    "lastName": "Usr1"
+}
+###
+
+POST http://localhost:6000/users/edit/15
+content-type: application/json
+
+{
+    "email": "test1@test.com",
+    "username": "test01",
+    "firstName": "New_new",
+    "lastName": "Usr01"
+}
+
+###
+
+GET http://localhost:6000/users/?email=test@test.com
